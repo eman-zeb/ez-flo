@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b1020">
+  <title>EZ Flo — Everything you need. One simple place.</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="welcome" class="welcome-screen">
+    <div class="welcome-glow"></div>
+    <div class="welcome-content">
+      <div class="brand-mark">EZ<span>✦</span></div>
+      <p class="eyebrow">YOUR SIMPLE PRODUCTIVITY SPACE</p>
+      <h1>Welcome to <span>EZ Flo</span></h1>
+      <p class="welcome-copy">Everything you need. One simple place.</p>
+      <button class="primary-btn big-btn" id="getStarted">Get Started <span>→</span></button>
+      <p class="small-note">No account needed · Your information stays in this browser</p>
+    </div>
+  </section>
+
+  <div id="app" class="app-shell hidden">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-page="home"><span class="brand-icon">EZ</span><span>EZ Flo<small>Keep life in flow</small></span></a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav id="mainNav">
+        <button class="nav-item active" data-page="home"><span>⌂</span> Home</button>
+        <button class="nav-item" data-page="tasks"><span>✓</span> Task Manager</button>
+        <button class="nav-item" data-page="schedule"><span>▦</span> Study Planner</button>
+        <button class="nav-item" data-page="notes"><span>▤</span> Smart Notes</button>
+        <button class="nav-item" data-page="gpa"><span>％</span> GPA Calculator</button>
+        <button class="nav-item" data-page="progress"><span>◷</span> Progress Tracker</button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="privacy-card"><span>🔒</span><div><b>Your data stays yours</b><small>Saved in this browser</small></div></div>
+        <button class="nav-item" data-page="settings"><span>⚙</span> Settings</button>
+      </div>
+    </aside>
+
+    <main class="main-area">
+      <header class="topbar">
+        <div><p class="top-kicker">YOUR PERSONAL WORKSPACE</p><h2 id="pageTitle">Home</h2></div>
+        <div class="top-actions"><span class="today" id="todayText"></span><button class="avatar" title="Your workspace">E</button></div>
+      </header>
+      <section id="pageContent" class="page-content"></section>
+    </main>
+    <button class="flo-launcher" id="floLauncher" aria-label="Open FloBot"><span>✦</span><b>FloBot</b></button>
+    <aside class="flo-panel hidden" id="floPanel">
+      <div class="flo-head"><div class="flo-avatar">✦</div><div><b>FloBot</b><small>Your EZ Flo guide</small></div><button id="closeFlo" class="icon-btn">×</button></div>
+      <div class="flo-messages" id="floMessages"><div class="bot-msg">Hi! I'm FloBot. I can show you how to use anything inside EZ Flo. What would you like help with?</div></div>
+      <form id="floForm" class="flo-form"><input id="floInput" placeholder="Ask about EZ Flo..." autocomplete="off"><button aria-label="Send">➤</button></form>
+      <p class="flo-hint">FloBot answers questions about this website only.</p>
+    </aside>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
